@@ -33,6 +33,15 @@ namespace MusicStore
 		protected global::System.Web.UI.WebControls.TextBox nameTextBox;
 
 		/// <summary>
+		/// Kontrolka typeTextBox2.
+		/// </summary>
+		/// <remarks>
+		/// Pole generowane automatycznie.
+		/// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.TextBox typeTextBox2;
+
+		/// <summary>
 		/// Kontrolka prizeTextBox3.
 		/// </summary>
 		/// <remarks>
@@ -60,39 +69,30 @@ namespace MusicStore
 		protected global::System.Web.UI.WebControls.TextBox descriptionTextBox5;
 
 		/// <summary>
-		/// Kontrolka typeTextBox2.
+		/// Kontrolka imageUpload.
 		/// </summary>
 		/// <remarks>
 		/// Pole generowane automatycznie.
 		/// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox typeTextBox2;
+		protected global::System.Web.UI.WebControls.FileUpload imageUpload;
 
 		/// <summary>
-		/// Kontrolka FileUpload1.
+		/// Kontrolka addToDBButton.
 		/// </summary>
 		/// <remarks>
 		/// Pole generowane automatycznie.
 		/// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+		protected global::System.Web.UI.WebControls.Button addToDBButton;
 
 		/// <summary>
-		/// Kontrolka Button1.
+		/// Kontrolka backButton1.
 		/// </summary>
 		/// <remarks>
 		/// Pole generowane automatycznie.
 		/// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button Button1;
-
-		/// <summary>
-		/// Kontrolka Button2.
-		/// </summary>
-		/// <remarks>
-		/// Pole generowane automatycznie.
-		/// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button Button2;
+		protected global::System.Web.UI.WebControls.Button backButton1;
 	}
 }
