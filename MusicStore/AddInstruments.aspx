@@ -49,13 +49,7 @@
             <asp:TextBox ID="descriptionTextBox5" runat="server"></asp:TextBox>
             		</td>
 				</tr>
-				<tr>
-					<td class="auto-style2">Image</td>
-					<td>
-            <asp:FileUpload ID="imageUpload" runat="server" />
-					</td>
-				</tr>
-			</table>
+				</table>
 			<asp:Button ID="addToDBButton" runat="server" Text="Save" Height="34px" OnClick="Button1_Click" Width="78px" />
         	<asp:Button ID="backButton1" runat="server" Height="34px" OnClick="backButton1_Click" Text="Back" Width="78px" />
         </div>

@@ -26,7 +26,7 @@ namespace MusicStore
 		{
 			SqlCommand cmd = con.CreateCommand();
 			cmd.CommandType = CommandType.Text;
-			cmd.CommandText = "insert into Instruments values('"+ nameTextBox.Text + "','"+ typeTextBox2.Text + "','"+ prizeTextBox3.Text + "','"+ quantityTextBox4.Text + "','"+ descriptionTextBox5.Text+ "','"+ imageUpload+ "')";
+			cmd.CommandText = "insert into Instruments values('"+ nameTextBox.Text + "','"+ typeTextBox2.Text + "','"+ prizeTextBox3.Text + "','"+ quantityTextBox4.Text + "','"+ descriptionTextBox5.Text+ "')";
 			cmd.ExecuteNonQuery();
 			Response.Redirect("~/AddInstruments.aspx");
 		}

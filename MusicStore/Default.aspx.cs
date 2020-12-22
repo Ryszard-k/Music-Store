@@ -11,7 +11,6 @@ namespace MusicStore
 {
 	public partial class Default : System.Web.UI.Page
 	{
-		String deleteId = "pusto";
 		SqlConnection con2 = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security = True");
 		protected void Page_Load(object sender, EventArgs e)
 		{
@@ -35,6 +34,26 @@ namespace MusicStore
 			cmd.ExecuteNonQuery();
 			Response.Redirect("~/Default.aspx");
 
+		}
+
+		protected void updateButton_Click(object sender, EventArgs e)
+		{
+			nameUpdateTextBox.Text = GridView1.SelectedRow.Cells[2].Text;
+			typeUpdateTextBox.Text = GridView1.SelectedRow.Cells[3].Text;
+			prizeUpdateTextBox.Text = GridView1.SelectedRow.Cells[4].Text;
+			quantityUpdateTextBox.Text = GridView1.SelectedRow.Cells[5].Text;
+			descriptionUpdateTextBox.Text = GridView1.SelectedRow.Cells[6].Text;
+		}
+
+		protected void saveButton_Click(object sender, EventArgs e)
+		{
+			SqlCommand cmd = con2.CreateCommand();
+			cmd.CommandType = CommandType.Text;
+			cmd.CommandText = "update Instruments set Name='" + nameUpdateTextBox.Text + "', Type='" +
+				typeUpdateTextBox.Text + "', Prize='" + prizeUpdateTextBox.Text + "', Quantity='" + 
+				quantityUpdateTextBox.Text + "', Description='" + descriptionUpdateTextBox.Text + "'where Id='" + GridView1.SelectedRow.Cells[1].Text + "'";
+			cmd.ExecuteNonQuery();
+			Response.Redirect("~/Default.aspx");
 		}
 	}
 }
