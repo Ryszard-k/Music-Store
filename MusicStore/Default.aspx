@@ -17,9 +17,15 @@
         <div>
             <h1 class="auto-style1">Music-Store</h1>
         </div>
-    	<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="None" Height="267px" Width="859px" AllowSorting="True">
+		<div>
+				<asp:Button ID="addButton" runat="server" Height="33px" OnClick="addButton_Click" Text="Add" Width="82px" />
+				<asp:Button ID="deleteButton" runat="server" Height="33px" OnClick="deleteButton_Click" Text="Delete" Width="82px" />
+				<br />
+		</div>
+    	<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="None" Height="267px" Width="859px" AllowSorting="True" AllowPaging="True">
 			<AlternatingRowStyle BackColor="PaleGoldenrod" />
 			<Columns>
+				<asp:CommandField ShowSelectButton="True" />
 				<asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
 				<asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
 				<asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
@@ -37,7 +43,6 @@
 			<SortedDescendingHeaderStyle BackColor="#C2A47B" />
 		</asp:GridView>
 		<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Instruments]"></asp:SqlDataSource>
-		<asp:Button ID="addButton" runat="server" Height="33px" OnClick="addButton_Click" Text="Add" Width="82px" />
     </form>
 </body>
 </html>

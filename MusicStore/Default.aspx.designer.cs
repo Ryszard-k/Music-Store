@@ -24,6 +24,24 @@ namespace MusicStore
 		protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
 		/// <summary>
+		/// Kontrolka addButton.
+		/// </summary>
+		/// <remarks>
+		/// Pole generowane automatycznie.
+		/// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Button addButton;
+
+		/// <summary>
+		/// Kontrolka deleteButton.
+		/// </summary>
+		/// <remarks>
+		/// Pole generowane automatycznie.
+		/// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Button deleteButton;
+
+		/// <summary>
 		/// Kontrolka GridView1.
 		/// </summary>
 		/// <remarks>
@@ -40,14 +58,5 @@ namespace MusicStore
 		/// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-
-		/// <summary>
-		/// Kontrolka addButton.
-		/// </summary>
-		/// <remarks>
-		/// Pole generowane automatycznie.
-		/// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button addButton;
 	}
 }

@@ -57,7 +57,11 @@
 				</tr>
 			</table>
 			<asp:Button ID="addToDBButton" runat="server" Text="Save" Height="34px" OnClick="Button1_Click" Width="78px" />
+        	<asp:Button ID="backButton1" runat="server" Height="34px" OnClick="backButton1_Click" Text="Back" Width="78px" />
         </div>
+    	
+    	<p>
+			&nbsp;</p>
     	
     </form>
 </body>

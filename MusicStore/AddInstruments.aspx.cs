@@ -28,6 +28,12 @@ namespace MusicStore
 			cmd.CommandType = CommandType.Text;
 			cmd.CommandText = "insert into Instruments values('"+ nameTextBox.Text + "','"+ typeTextBox2.Text + "','"+ prizeTextBox3.Text + "','"+ quantityTextBox4.Text + "','"+ descriptionTextBox5.Text+ "','"+ imageUpload+ "')";
 			cmd.ExecuteNonQuery();
+			Response.Redirect("~/AddInstruments.aspx");
+		}
+
+		protected void backButton1_Click(object sender, EventArgs e)
+		{
+			Response.Redirect("~/Default.aspx");
 		}
 	}
 }
