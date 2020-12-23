@@ -33,8 +33,9 @@
         </div>
     	<p>
 			<asp:Button ID="createUserButton1" runat="server" OnClick="createUserButton1_Click" Text="Create user" />
-			<asp:Button ID="deleteUserButton1" runat="server" CssClass="auto-style4" OnClick="deleteUserButton1_Click" Text="Delete User" />
-			<asp:Button ID="Button1" runat="server" CssClass="auto-style4" Text="Button" />
+			<asp:Button ID="deleteUserButton1" runat="server" CssClass="auto-style4" OnClick="deleteUserButton1_Click" Text="Delete user" />
+			<asp:Button ID="updateUserButton1" runat="server" CssClass="auto-style4" OnClick="updateUserButton1_Click" Text="Update user" />
+			<asp:Button ID="saveChangesButton1" runat="server" CssClass="auto-style4" OnClick="saveChangesButton1_Click" Text="Save changes" />
 		</p>
 	<div>
 

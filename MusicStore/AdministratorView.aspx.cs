@@ -39,5 +39,22 @@ namespace MusicStore
 			cmd.ExecuteNonQuery();
 			Response.Redirect("~/AdministratorView.aspx");
 		}
+
+		protected void updateUserButton1_Click(object sender, EventArgs e)
+		{
+			userNameTextBox1.Text = administratorGridView1.SelectedRow.Cells[2].Text;
+			passwordTextBox2.Text = administratorGridView1.SelectedRow.Cells[3].Text;
+			roleTextBox3.Text = administratorGridView1.SelectedRow.Cells[4].Text;
+		}
+
+		protected void saveChangesButton1_Click(object sender, EventArgs e)
+		{
+			SqlCommand cmd = con2.CreateCommand();
+			cmd.CommandType = CommandType.Text;
+			cmd.CommandText = "update Users set UserName='" + userNameTextBox1.Text + "', Password='" +
+				passwordTextBox2.Text + "', Role='" + roleTextBox3.Text + "'where Id='" + administratorGridView1.SelectedRow.Cells[1].Text + "'";
+			cmd.ExecuteNonQuery();
+			Response.Redirect("~/AdministratorView.aspx");
+		}
 	}
 }
