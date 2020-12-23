@@ -69,22 +69,22 @@ namespace MusicStore
 		protected global::System.Web.UI.WebControls.Button deleteUserButton1;
 
 		/// <summary>
-		/// Kontrolka updateUserButton1.
+		/// Kontrolka Button1.
 		/// </summary>
 		/// <remarks>
 		/// Pole generowane automatycznie.
 		/// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button updateUserButton1;
+		protected global::System.Web.UI.WebControls.Button Button1;
 
 		/// <summary>
-		/// Kontrolka GridView1.
+		/// Kontrolka administratorGridView1.
 		/// </summary>
 		/// <remarks>
 		/// Pole generowane automatycznie.
 		/// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.GridView GridView1;
+		protected global::System.Web.UI.WebControls.GridView administratorGridView1;
 
 		/// <summary>
 		/// Kontrolka SqlDataSource1.

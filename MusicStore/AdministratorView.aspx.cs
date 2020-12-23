@@ -30,5 +30,14 @@ namespace MusicStore
 			cmd.ExecuteNonQuery();
 			Response.Redirect("~/AdministratorView.aspx");
 		}
+
+		protected void deleteUserButton1_Click(object sender, EventArgs e)
+		{
+			SqlCommand cmd = con2.CreateCommand();
+			cmd.CommandType = CommandType.Text;
+			cmd.CommandText = "delete from Users where Id='" + administratorGridView1.SelectedRow.Cells[1].Text + "'";
+			cmd.ExecuteNonQuery();
+			Response.Redirect("~/AdministratorView.aspx");
+		}
 	}
 }
