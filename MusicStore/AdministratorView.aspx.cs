@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.Security;
 
 namespace MusicStore
 {
@@ -26,7 +27,10 @@ namespace MusicStore
 		{
 			SqlCommand cmd = con2.CreateCommand();
 			cmd.CommandType = CommandType.Text;
-			cmd.CommandText = "insert into Users values('" + userNameTextBox1.Text + "','" + passwordTextBox2.Text + "','" + roleTextBox3.Text + "')";
+
+			string hashedPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(passwordTextBox2.Text, "MD5");
+
+			cmd.CommandText = "insert into Users values('" + userNameTextBox1.Text + "','" + hashedPassword + "','" + roleTextBox3.Text + "')";
 			cmd.ExecuteNonQuery();
 			Response.Redirect("~/AdministratorView.aspx");
 		}
@@ -43,7 +47,7 @@ namespace MusicStore
 		protected void updateUserButton1_Click(object sender, EventArgs e)
 		{
 			userNameTextBox1.Text = administratorGridView1.SelectedRow.Cells[2].Text;
-			passwordTextBox2.Text = administratorGridView1.SelectedRow.Cells[3].Text;
+			passwordTextBox2.Text = FormsAuthentication.HashPasswordForStoringInConfigFile(administratorGridView1.SelectedRow.Cells[3].Text, "MD5");;
 			roleTextBox3.Text = administratorGridView1.SelectedRow.Cells[4].Text;
 		}
 
@@ -52,7 +56,7 @@ namespace MusicStore
 			SqlCommand cmd = con2.CreateCommand();
 			cmd.CommandType = CommandType.Text;
 			cmd.CommandText = "update Users set UserName='" + userNameTextBox1.Text + "', Password='" +
-				passwordTextBox2.Text + "', Role='" + roleTextBox3.Text + "'where Id='" + administratorGridView1.SelectedRow.Cells[1].Text + "'";
+				FormsAuthentication.HashPasswordForStoringInConfigFile(passwordTextBox2.Text, "MD5") + "', Role='" + roleTextBox3.Text + "'where Id='" + administratorGridView1.SelectedRow.Cells[1].Text + "'";
 			cmd.ExecuteNonQuery();
 			Response.Redirect("~/AdministratorView.aspx");
 		}

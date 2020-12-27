@@ -19,10 +19,13 @@
     <form id="form1" runat="server">
         <div>
         	<asp:Label ID="userNameLabel1" runat="server" Text="User Name"></asp:Label>
-			<asp:TextBox ID="loginTextBox1" runat="server" CssClass="auto-style1"></asp:TextBox>
+			<asp:TextBox ID="userNameTextBox1" runat="server" CssClass="auto-style1"></asp:TextBox>
         </div>
     	<asp:Label ID="passwordLabel2" runat="server" Text="Password"></asp:Label>
 		<asp:TextBox ID="passwordTextBox2" runat="server" CssClass="auto-style2" TextMode="Password"></asp:TextBox>
+		<br />
+		<asp:Label ID="validLabel1" runat="server" ForeColor="Red" Text="Your username or password is invalid. Please try again." Visible="False"></asp:Label>
+		<br />
 		<p>
 			<asp:Button ID="loginButton1" runat="server" OnClick="Button1_Click" Text="Login" />
 		</p>

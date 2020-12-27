@@ -33,13 +33,13 @@ namespace MusicStore
 		protected global::System.Web.UI.WebControls.Label userNameLabel1;
 
 		/// <summary>
-		/// Kontrolka loginTextBox1.
+		/// Kontrolka userNameTextBox1.
 		/// </summary>
 		/// <remarks>
 		/// Pole generowane automatycznie.
 		/// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox loginTextBox1;
+		protected global::System.Web.UI.WebControls.TextBox userNameTextBox1;
 
 		/// <summary>
 		/// Kontrolka passwordLabel2.
@@ -58,6 +58,15 @@ namespace MusicStore
 		/// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.TextBox passwordTextBox2;
+
+		/// <summary>
+		/// Kontrolka validLabel1.
+		/// </summary>
+		/// <remarks>
+		/// Pole generowane automatycznie.
+		/// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Label validLabel1;
 
 		/// <summary>
 		/// Kontrolka loginButton1.
