@@ -18,7 +18,7 @@ namespace MusicStore
 
 		}
 
-		private bool AuthenticateUser(string username, string password)
+		private bool AuthenticateUser(string username, string password, string role)
 		{
 			string CS = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 			using (SqlConnection con = new SqlConnection(CS))
@@ -30,9 +30,11 @@ namespace MusicStore
 
 				SqlParameter paramUsername = new SqlParameter("@UserName", username);
 				SqlParameter paramPassword = new SqlParameter("@Password", EncryptedPassword);
+				SqlParameter paramRole = new SqlParameter("@Role", role);
 
 				cmd.Parameters.Add(paramUsername);
 				cmd.Parameters.Add(paramPassword);
+				cmd.Parameters.Add(paramRole);
 
 				con.Open();
 				int ReturnCode = (int)cmd.ExecuteScalar();
@@ -43,12 +45,24 @@ namespace MusicStore
 
 		protected void Button1_Click(object sender, EventArgs e)
 		{
-			if (AuthenticateUser(userNameTextBox1.Text, passwordTextBox2.Text))
+			if (AuthenticateUser(userNameTextBox1.Text, passwordTextBox2.Text, roleTextBox1.Text))
 			{
-				string CS = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-				using (SqlConnection con = new SqlConnection(CS))
-					//if ()
-				Response.Redirect("~/AdministratorView.aspx");
+				switch (roleTextBox1.Text)
+				{
+					case "administrator":
+						FormsAuthentication.SetAuthCookie(userNameTextBox1.Text, true);
+						Response.Redirect("~/AdministratorView.aspx");
+						break;
+
+					case "employee":
+						FormsAuthentication.SetAuthCookie(userNameTextBox1.Text, true);
+						Response.Redirect("~/EmployeeView.aspx");
+						break;
+
+					default:
+						Response.Redirect("~/LoginView.aspx");
+						break;
+				}
 			}
 			else
 			{

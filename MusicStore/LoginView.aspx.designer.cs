@@ -60,6 +60,15 @@ namespace MusicStore
 		protected global::System.Web.UI.WebControls.TextBox passwordTextBox2;
 
 		/// <summary>
+		/// Kontrolka roleTextBox1.
+		/// </summary>
+		/// <remarks>
+		/// Pole generowane automatycznie.
+		/// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.TextBox roleTextBox1;
+
+		/// <summary>
 		/// Kontrolka validLabel1.
 		/// </summary>
 		/// <remarks>
